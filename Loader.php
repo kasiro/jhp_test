@@ -8,13 +8,22 @@ class Loader {
 	}
 
 	public function addModule(string $PathToModule){
-		$this->modules[] = $PathToModule;
+		$this->modules[$PathToModule] = $module = require_once $PathToModule;
+		$module_type = basename($PathToModule) == 'index.php' ? 'large' : 'module';
+		if ($module_type == 'large'){
+			$name = $module->getName();
+			$this->Logger->add("load large module: '$name'");
+		} else {
+			$name = $module->getName();
+			$this->Logger->add("load module: '$name'");
+		}
 	}
 
 	public function process($code){
-		foreach ($this->modules as $module){
-			$moduleObject = require_once $module;
-			$code = $moduleObject->handle($code);
+		foreach ($this->modules as $pathToModule => $module){
+			if (is_object($module)){
+				$code = $module->handle($code);
+			}
 		}
 		return $code;
 	}

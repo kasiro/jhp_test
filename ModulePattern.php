@@ -9,8 +9,12 @@ class JhpModule {
 		return explode('.', basename($path))[0];
 	}
 
-	public function setName(string $name){
-		$newName = $this->PrepareName($name);
+	public function setName(string $name, $prepare = true){
+		if ($prepare){
+			$newName = $this->PrepareName($name);
+		} else {
+			$newName = $name;
+		}
 		$this->name = $newName;
 	}
 
@@ -34,7 +38,7 @@ class JhpModule {
 		if (!array_key_exists($regexp, static::$list)){
 			static::$list[$regexp] = $function;
 		} else {
-			throw new Exception('regexp is aelredy in $list');
+			throw new Exception('regexp is already in $list');
 		}
 	}
 
@@ -50,7 +54,7 @@ class JhpModule {
 					break;
 				
 				default:
-					throw new Exception('$act is not NEED TYPE - (string|callable) "mphp" type is ' . gettype($act));
+					throw new Exception('$function is not NEED TYPE - (string|callable) "mphp" type is ' . gettype($act));
 					break;
 			}
 		}

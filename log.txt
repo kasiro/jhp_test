@@ -1,0 +1,8 @@
+[06.10.2021][13:54] file full path is '/home/kasiro/Документы/projects/rahman_jhp/test/test.jhp'
+[06.10.2021][13:54] file dirname path is '/home/kasiro/Документы/projects/rahman_jhp/test'
+[06.10.2021][13:54] file basename path is 'test.jhp'
+[06.10.2021][13:54] file savefull path is '/home/kasiro/Документы/projects/rahman_jhp/test/test.php'
+[06.10.2021][13:54] load module: 'js_else'
+[06.10.2021][13:54] load large module: 'import'
+[06.10.2021][13:54] load large module: 'spread'
+

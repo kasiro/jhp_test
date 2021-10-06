@@ -1,4 +1,6 @@
 <?php
 
+import 'fs';
+
 $arr = ['key', 'val'];
 var [$key, $val] = $arr;
