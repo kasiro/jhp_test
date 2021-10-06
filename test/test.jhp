@@ -1,0 +1,4 @@
+<?php
+
+$arr = ['key', 'val'];
+var [$key, $val] = $arr;
