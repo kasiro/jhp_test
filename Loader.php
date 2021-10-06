@@ -4,7 +4,7 @@ class Loader {
 	public $modules = [];
 
 	function __construct(){
-		require 'ModulePattern.php';
+		require __DIR__.'/ModulePattern.php';
 	}
 
 	public function addModule(string $PathToModule){

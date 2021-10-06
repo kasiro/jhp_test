@@ -20,7 +20,7 @@ class JhpModule {
 					break;
 				
 				default:
-					throw new Exception('$act is not NEED TYPE (mphp) type is ' . gettype($act));
+					throw new Exception('$act is not NEED TYPE - (string|callable) "mphp" type is ' . gettype($act));
 					break;
 			}
 		}

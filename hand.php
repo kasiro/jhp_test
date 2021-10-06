@@ -1,6 +1,6 @@
 <?php
 
-require './Loader.php';
+require __DIR__.'/Loader.php';
 
 class App {
 	public static $path = '';
