@@ -2,7 +2,7 @@
 
 require __DIR__.'/func.php';
 // Test Module
-$module = new JhpModule;
+$module = new jModule;
 $module->setSettings([
 	'use' => false
 ]);

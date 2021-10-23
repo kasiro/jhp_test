@@ -87,7 +87,7 @@ $throw_text = function ($path){
 if (!defined('FILE_REQ')) define('FILE_REQ', $path.'/user_modules');
 require __DIR__.'/func.php';
 
-$module = new JhpModule;
+$module = new jModule;
 $module->setSettings([
 	'use' => true,
 	'fullpath' => true,

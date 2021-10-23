@@ -4,3 +4,17 @@ import 'fs';
 
 $arr = ['key', 'val'];
 var [$key, $val] = $arr;
+
+$console_log = $command => {
+	nl '$ ' . $command;
+};
+$var = 'fn() => main';
+$new_arr['getState'] = fn($state, $func) use ($console_log) => {
+	$console_log("state is '$state'");
+	$console_log("func is '" . $func('fall') . "'");
+};
+$new_arr['getState']('zero', $el => {
+	return $el;
+});
+
+$main = $new_arr | $key;
